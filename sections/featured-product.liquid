@@ -1,0 +1,86 @@
+{% assign product = section.settings.product %}
+{{ 'featured-products.css' | asset_url | stylesheet_tag }}
+
+<div class="section">
+  <div class="featured-product-wrapper">
+
+    <div class="featured-product-info">
+      <div class="product-image">
+        <img src="{{ 'canva.webp' | asset_url }}" alt="{{ product.title }}">
+      </div>  
+      <div class="product-details">
+        <div class="specific-details">
+          <h4 class="title">{{ product.title }}</h4>
+          {% if product.compare_at_price > product.price %}
+            {% assign savings = product.compare_at_price | minus: product.price %}
+            <p class="price">{{ product.price | money | remove: ",00" }}</p>
+            <p class="compare-price">{{ product.compare_at_price | money | remove: ",00" }}</p>
+            <p class="savings">save {{ savings | money | remove: ",00" }}</p>            
+          {% else %}
+            <p class="price">Price: {{ product.price | money }}</p>
+          {% endif %}
+          <div class="description">
+            {% assign max_words = 55 %}
+            {% assign words = product.description | split: '\s+' | size %}
+            {% if words <= max_words %}
+              <p>{{ product.description }}</p>
+            {% else %}
+              {% assign truncated_description = product.description | truncatewords: max_words %}
+              <p>{{ truncated_description }}...</p>
+            {% endif %}
+          </div>
+        </div>
+        <p class="product-tags">
+          {% for tag in product.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </p>
+        <div class="add-to-cart-wrapper">
+          {% if product.available %}
+            {% if product.variants.size > 1 %}
+              <form action="/cart/add" method="post">
+                <select name="id">
+                  {% for variant in product.variants %}
+                    <option value="{{ variant.id }}">{{ variant.title }}</option>
+                  {% endfor %}
+                </select>
+                <input type="submit" value="Add to Cart" class="add-to-cart-button">
+              </form>
+            {% else %}
+              <form action="/cart/add" method="post">
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                <input type="submit" value="Add to Cart" class="add-to-cart-button">
+              </form>
+            {% endif %}
+          {% else %}
+            <p class="sold-out">Sold Out</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    
+    <div class="more-info">
+      {% render 'product-more-info' %}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Featured product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured product"
+    }
+  ]
+}
+{% endschema %}
