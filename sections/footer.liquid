@@ -1,0 +1,24 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="contact">
+      <div class="contact-header">CONTACT US</div>
+      <div class="contact-info">
+        <div class="email">hello@shopify.com</div>
+        <div class="rights">Copyright 2023 Drive Digital. All rights reserved.</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Return</a>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer"
+}
+{% endschema %}
