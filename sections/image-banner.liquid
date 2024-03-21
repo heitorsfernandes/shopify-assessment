@@ -1,0 +1,40 @@
+{{ 'image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="image-banner" style="background-image: url('{{ 'photographer-working-at-his-desk.webp' | asset_url }}');">
+  <div class="banner-content">
+    <div class="text-block">
+      <h5>Shopify eCommerce experts.</h5>
+    </div>
+    <div class="text-block-2">
+      <h3>We design, build and optimise exceptional eCommerce websites.</h3>
+    </div>
+    <div class="button-block">
+      <a href="#" class="start-project-button">START YOUR PROJECT</a>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Image banner",
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo_image",
+          "label": "Logo Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image banner"
+    }
+  ]
+}
+{% endschema %}

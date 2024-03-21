@@ -1,0 +1,151 @@
+.image-banner {
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  background-size: cover; /* Evita o zoom e mantém a proporção */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  }
+
+.text-block,
+.text-block-2,
+.button-block {
+  margin: 0; /* Reset margin for all child elements */
+}
+
+.text-block h5,
+.text-block-2 h3 {
+  margin: 0; /* Reset margin for h5 and h3 elements */
+}
+
+.text-block h5 {
+  font-family: Montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2BD896;
+  margin: 0;
+}
+
+.text-block-2 h3 {
+  font-family: Poppins;
+  color: #FFFFFF;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.button-block {
+  border-radius: 5px 0px 0px 0px;
+  opacity: 0px;
+  background: #C6474B;
+  text-align: center; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.button-block a {
+  font-weight: 700;
+  font-family: Montserrat;
+  color: #FFFFFF; /* Cor da letra para botão */
+  text-decoration: none; /* Remove underline */
+}
+
+.button-block:hover {
+  background: #B33F44; /* Cor de fundo ao passar o mouse */
+}
+
+@media screen and (min-width: 801px) {
+  .image-banner {
+  height: 471px;
+  }
+  
+  .banner-content{
+    width: 332px;
+    height: 196px;
+    margin-top: 213px;
+    margin-left: 142px;
+    padding: 10px 0px 0px 0px;
+    gap: 10px;
+    opacity: 0px;
+  }
+
+  .text-block h5 {
+    width: 276px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .text-block-2 h3 {
+    width: 350px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 42px;
+  }
+  
+  .button-block {
+    width: 236px;
+    height: 37px; 
+    padding: 10px 0px 0px 0px;
+    gap: 10px;
+  }
+
+  .button-block a {
+    font-size: 14px;
+    line-height: 17.07px;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  .image-banner {
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    background-size: cover; /* Evita o zoom e mantém a proporção */
+    background-position: center; /* Centraliza a imagem */
+  }
+
+    .banner-content{
+      width: 261px;
+      height: 165px;
+      padding: 0px 0px 0px 0px;
+      gap: 10px;
+      margin-top: 326px;
+      margin-left: 59px;
+      opacity: 0px;
+    }
+  
+    .text-block h5 {
+      font-size: 12px;
+      line-height: 14.63px;
+      text-align: center;
+    }
+    
+    .text-block-2 h3 {
+      font-size: 22px;
+      line-height: 33px;
+      text-align: center;
+      margin: 0;
+    }
+    
+    .button-block {
+      width: 261px;
+      height: 35px; 
+      padding: 10px 0px 0px 0px;
+      gap: 10px;
+    }
+
+    .button-block a {
+      font-size: 12px;
+      line-height: 14.63px;
+    }
+
+  }
