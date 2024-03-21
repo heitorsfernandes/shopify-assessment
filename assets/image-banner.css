@@ -106,7 +106,7 @@
 
 @media screen and (max-width: 800px) {
   .image-banner {
-    min-height: 300px;
+    min-height: 500px;
     width: 100%;
     display: flex;
     background-size: cover; /* Evita o zoom e mantém a proporção */
@@ -117,7 +117,7 @@
       width: 261px;
       height: 165px;
       padding: 0px 0px 0px 0px;
-      gap: 10px;
+      gap: 8px;
       margin-top: 326px;
       margin-left: 59px;
       opacity: 0px;
@@ -130,10 +130,12 @@
     }
     
     .text-block-2 h3 {
-      font-size: 22px;
-      line-height: 33px;
+      font-size: 18px;
+      line-height: 24px;
       text-align: center;
       margin: 0;
+      font-weight: 700;
+      font-family: Poppins;
     }
     
     .button-block {
