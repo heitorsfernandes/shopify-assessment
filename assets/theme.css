@@ -1,0 +1,310 @@
+/* base */
+
+.no-js:not(html) {
+  display: none !important;
+}
+
+html.no-js .no-js:not(html) {
+  display: block !important;
+}
+
+.no-js-inline {
+  display: none !important;
+}
+
+html.no-js .no-js-inline {
+  display: inline-block !important;
+}
+
+html.no-js .no-js-hidden {
+  display: none !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
+
+.visually-hidden--inline {
+  margin: 0;
+  height: 1em;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.skip-to-content-link:focus {
+  z-index: 9999;
+  position: inherit;
+  overflow: auto;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+::selection {
+  background-color: rgba(var(--color-foreground), 0.2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
+  color: rgb(var(--color-foreground));
+  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  word-break: break-word;
+}
+
+.hxl {
+  font-size: calc(var(--font-heading-scale) * 5rem);
+}
+
+@media only screen and (min-width: 750px) {
+  .hxl {
+    font-size: calc(var(--font-heading-scale) * 6.2rem);
+  }
+}
+
+.h0 {
+  font-size: calc(var(--font-heading-scale) * 4rem);
+}
+
+@media only screen and (min-width: 750px) {
+  .h0 {
+    font-size: calc(var(--font-heading-scale) * 5.2rem);
+  }
+}
+
+h1,
+.h1 {
+  font-size: calc(var(--font-heading-scale) * 3rem);
+}
+
+@media only screen and (min-width: 750px) {
+  h1,
+  .h1 {
+    font-size: calc(var(--font-heading-scale) * 4rem);
+  }
+}
+
+h2,
+.h2 {
+  font-size: calc(var(--font-heading-scale) * 2rem);
+}
+
+@media only screen and (min-width: 750px) {
+  h2,
+  .h2 {
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
+  }
+}
+
+h3,
+.h3 {
+  font-size: calc(var(--font-heading-scale) * 1.7rem);
+}
+
+@media only screen and (min-width: 750px) {
+  h3,
+  .h3 {
+    font-size: calc(var(--font-heading-scale) * 1.8rem);
+  }
+}
+
+h4,
+.h4 {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
+}
+
+h5,
+.h5 {
+  font-size: calc(var(--font-heading-scale) * 1.2rem);
+}
+
+@media only screen and (min-width: 750px) {
+  h5,
+  .h5 {
+    font-size: calc(var(--font-heading-scale) * 1.3rem);
+  }
+}
+
+h6,
+.h6 {
+  color: rgba(var(--color-foreground), 0.75);
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+}
+
+/*
+  Focus ring - none
+*/
+
+.focus-none {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+/* Page Width */
+
+.page-width {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .page-width {
+    padding: 0 5rem;
+  }
+}
+
+/*
+  Header
+*/
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinhar verticalmente */
+}
+
+.header__heading {
+  margin: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center; /* Alinhar verticalmente */
+}
+
+.header__icons {
+  display: flex;
+  align-items: center; /* Alinhar verticalmente */
+}
+
+.header__icon {
+  color: rgb(18, 18, 18);
+}
+
+.header__icon,
+.header__icon--cart .icon {
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
+}
+
+.footer {
+  border-top: 1px solid #D9D9D9;
+  padding-top: 20px;
+}
+
+/* Ajustes para desktop */
+@media screen and (min-width: 801px) {
+  .header {
+    width: 100%;
+    height: 90px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+  }
+
+  .header__icons {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente */
+    justify-content: flex-end; /* Alinhar os ícones no final */
+    padding-right: 20px; /* Adicionar espaçamento à direita */
+  }
+
+  .header__heading-logo-wrapper {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente */
+    margin-left: 160px; /* Espaçamento à esquerda */
+  }
+
+  .header__heading-logo-wrapper img {
+    width: 161px; /* Ajustar a largura da logo */
+    height: 46px; /* Altura fixa */
+  }
+
+  .header__icons a {
+    width: 15px;
+    margin-right: 161px;
+  }
+}
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 800) {
+  .header {
+    width: 100%; /* Largura fixa */
+    height: 32px; /* Altura ajustada ao conteúdo */
+    top: 5px; /* Distância superior */
+    left: 14px; /* Distância esquerda */
+    gap: 226px; /* Espaço entre os elementos */
+    padding: 0; /* Remover padding */
+  }
+
+  .header__heading {
+    flex: 1; /* Ocupar todo o espaço disponível */
+    justify-content: flex-start; /* Alinhar a logo no início */
+    padding-left: 20px; /* Adicionar espaçamento à esquerda */
+  }
+
+  .header__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinhar os ícones no final */
+    padding-right: 20px; /* Adicionar espaçamento à direita */
+  }
+
+  /* Aumentar o tamanho da logo */
+  .header__heading-logo-wrapper img {
+    width: 112px; /* Ajustar a largura da logo */
+    height: 32px; /* Altura fixa */
+    padding: 0; /* Remover padding */
+    gap: 0; /* Remover gap */
+  }
+
+  /* Ajustes para o carrinho no lado direito */
+  .header__icons a {
+    display: flex;
+    align-items: center;
+    width: 24px; /* Largura fixa */
+    height: 21px; /* Altura fixa */
+    gap: 0; /* Remover gap */
+    border-radius: 9999px 0 0 0; /* Ajustar borda do ícone */
+    padding: 0; /* Remover padding */
+  }
+}
+
+
+/* --------------------
+Custom CSS 
+*/
