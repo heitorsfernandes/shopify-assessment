@@ -1,0 +1,32 @@
+{% assign product = section.settings.product %}
+{{ 'product-more-info.css' | asset_url | stylesheet_tag }}
+
+
+{% if product.metafields %}
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapsible(this)">Material</div>
+    <div class="collapsible-content">
+    <p class="inside-text">{{ product.metafields.material.material }}</p>
+    </div>
+  </div>
+
+  <div class="collapsible">
+  <div class="collapsible-header" onclick="toggleCollapsible(this)">Delivery</div>
+  <div class="collapsible-content">
+    <p class="inside-text">{{ product.metafields.delivery.delivery }}</p>
+  </div>
+</div>
+{% endif %}
+
+<!-- JavaScript (optional) -->
+<script>
+  function toggleCollapsible(element) {
+    var content = element.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
+
