@@ -98,7 +98,7 @@
         font-family: Montserrat;
         font-size: 14px;
         font-weight: 400;
-        line-height: 20px;
+        line-height: 16px;
         letter-spacing: 0.05em;
         text-align: left;
       }
@@ -152,6 +152,14 @@
         position: absolute;
         top: 45px;
         right: 190px;
+      }
+
+      .description p {
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.05em;
       }
 }
 
