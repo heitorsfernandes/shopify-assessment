@@ -2,7 +2,7 @@
 
 # Shopify Theme Development for Drive Digital
 
-This repository contains a Shopify theme developed as an assessment project for Drive Digital. The theme primarily utilizes CSS and HTML, with logic built using the Liquid language to access Shopify information.
+This repository contains a Shopify theme developed as an assessment project for Drive Digital, a responsive design for a homepage suited for pages with 1440px or 393px, like desktop, Iphone 14 and 15 pro. The theme primarily utilizes CSS and HTML, with logic built using the Liquid language to access Shopify information.
 
 ## Steps to Use:
 
@@ -17,6 +17,13 @@ This repository contains a Shopify theme developed as an assessment project for 
 - Use the provided password but the owner to acess the store
 
 -Click on `Customize your theme` in the theme editor to access the Shopify theme customizer or `Share your theme preview`
+
+## Main changes on folders:
+
+|-- ...assets
+|-- ...sections
+|-- ...snippets
+
 
 
 
