@@ -44,12 +44,12 @@
                     <option value="{{ variant.id }}">{{ variant.title }}</option>
                   {% endfor %}
                 </select>
-                <input type="submit" value="Add to Cart" class="add-to-cart-button">
+                <input type="submit" value="{% if product.variants.first.available %}Add to Cart{% else %}Added to Cart{% endif %}" class="add-to-cart-button">
               </form>
             {% else %}
               <form action="/cart/add" method="post">
                 <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                <input type="submit" value="Add to Cart" class="add-to-cart-button">
+                <input type="submit" value="{% if product.variants.first.available %}Add to Cart{% else %}Added to Cart{% endif %}" class="add-to-cart-button">
               </form>
             {% endif %}
           {% else %}
@@ -64,8 +64,6 @@
     </div>
   </div>
 </div>
-
-
 
 {% schema %}
 {
